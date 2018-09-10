@@ -1,5 +1,49 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Verdana;
 }
+
+#picture{
+    border:1px;
+    border-style: solid;
+    border-color: black;
+    height: 90%;
+}
+
+#nav{
+    margin-left: 5px;
+}
+
+#text{
+
+}
+
+/*Grid style*/
+.container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 50px 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+@media (max-width: 800px) {
+    /*tablets*/
+    .container{
+        grid-auto-flow: column;
+    }
+    .item{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    /*mobil*/
+    .container{
+        grid-auto-flow: column;
+    }
+}
+
