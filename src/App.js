@@ -6,27 +6,38 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          {/*<header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>*/}
+          <header className="App-header">
+              {/*<img src={logo} className="App-logo" alt="logo" />*/}
+              <h1 className="App-title">Fin header</h1>
+          </header>
           <main>
               <div id="nav">
                   {/*nav bar */}
-                  <img src="https://itknowledgeexchange.techtarget.com/overheard/files/2016/08/hamburger-icon.png"></img>
+                  <button>Press me</button>
               </div>
-              <div class="container">
+              <div className="container">
                   {/* Placeholder bilde for nå, må hente media på annen måte senere.*/}
-                  <div class="item" id="picture">
-
+                  <div className="item" id="picture">
+                      <p>Bilde</p>
                   </div>
-                  <div class="item" id="text">
+                  <div className="item" id="text">
                       {/*Her må vi hente ut json objekt med AJAX*/}
                       <p> Dette er bare noe vakker placeholde tekst.</p>
                       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
+                      <p>kek</p>
+                      <p>kek</p>
+                      <p>kek</p>
                   </div>
               </div>
           </main>
+          <footer>
+              <p>vakker footer</p>
+          </footer>
       </div>
     );
   }
