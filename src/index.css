@@ -1,16 +1,6 @@
-html{
-    position: relative;
-    min-height: 100%;
-}
-
 body {
-    margin: 0 0 50px;
+    margin: 0;
     font-family: Verdana, sans-serif;
-
-}
-
-main{
-    min-height: 100%;
 }
 
 #picture{
@@ -45,10 +35,6 @@ button{
 button:hover{
     background-color: #198462;
     border-radius: 8px;
-}
-
-main{
-    min-height: 100%;
 }
 
 footer{
@@ -89,4 +75,3 @@ footer{
         grid-auto-flow: column;
     }
 }
-

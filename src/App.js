@@ -7,7 +7,6 @@ class App extends Component {
     return (
       <div className="App">
           <header className="App-header">
-              {/*<img src={logo} className="App-logo" alt="logo" />*/}
               <h1 className="App-title">Fin header</h1>
           </header>
           <main>
@@ -19,6 +18,7 @@ class App extends Component {
                   {/* Placeholder bilde for nå, må hente media på annen måte senere.*/}
                   <div className="item" id="picture">
                       <p>Bilde</p>
+                      {/*<img src={navn på bildet} className="bilde" alt="Bilde" />*/}
                   </div>
                   <div className="item" id="text">
                       {/*Her må vi hente ut json objekt med AJAX*/}
@@ -35,9 +35,9 @@ class App extends Component {
                   </div>
               </div>
           </main>
-          <footer>
+          {/*<footer>
               <p>vakker footer</p>
-          </footer>
+          </footer>*/}
       </div>
     );
   }
