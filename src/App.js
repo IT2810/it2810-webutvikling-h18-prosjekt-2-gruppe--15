@@ -17,7 +17,8 @@ class App extends Component {
                   <button>Press me</button>
               </div>
               <ContainerComponent></ContainerComponent>
-
+              <ContainerComponent></ContainerComponent>
+              <ContainerComponent></ContainerComponent>
           </main>
           {/*<footer>
               <p>vakker footer</p>
