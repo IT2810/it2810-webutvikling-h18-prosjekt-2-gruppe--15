@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SVGImageContainer from "./SVGImageContainer";
 
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">
@@ -14,12 +16,11 @@ class App extends Component {
                   {/*nav bar */}
                   <button>Press me</button>
               </div>
-              <div className="container">
-                  {/* Placeholder bilde for nå, må hente media på annen måte senere.*/}
-                  <div className="item" id="picture">
-                      <p>Bilde</p>
-                      {/*<img src={navn på bildet} className="bilde" alt="Bilde" />*/}
-                  </div>
+              <div className="container" >
+
+                  {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
+                    -Jonas */}
+                  <SVGImageContainer url={"/logo.svg"} />
                   <div className="item" id="text">
                       {/*Her må vi hente ut json objekt med AJAX*/}
                       <p> Dette er bare noe vakker placeholde tekst.</p>
@@ -38,6 +39,7 @@ class App extends Component {
           {/*<footer>
               <p>vakker footer</p>
           </footer>*/}
+
       </div>
     );
   }
