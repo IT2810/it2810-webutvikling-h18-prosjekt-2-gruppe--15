@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import SVGImageContainer from "./SVGImageContainer";
+import PoemContainer from "./PoemContainer";
 
 class App extends Component {
 
@@ -21,19 +22,7 @@ class App extends Component {
                   {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                     -Jonas */}
                   <SVGImageContainer url={"/logo.svg"} />
-                  <div className="item" id="text">
-                      {/*Her må vi hente ut json objekt med AJAX*/}
-                      <p> Dette er bare noe vakker placeholde tekst.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae semper quam. Praesent lobortis tellus quis erat condimentum, a bibendum tortor volutpat.</p>
-                      <p>kek</p>
-                      <p>kek</p>
-                      <p>kek</p>
-                  </div>
+                  <PoemContainer url={"/poems/placeholder.json"} />
               </div>
           </main>
           {/*<footer>
