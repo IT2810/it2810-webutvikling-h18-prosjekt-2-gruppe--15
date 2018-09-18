@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import SVGImageContainer from "./SVGImageContainer";
-import PoemContainer from "./PoemContainer";
+import ContainerComponent from './ContainerComponent';
+import Data from "./urls";
 
 class App extends Component {
 
+    constructor(props){
+        super(props);
+        //console.log(urlData);
+        this.state = {key: "rain", svgIndex: 0, audioIndex: 0, poemIndex: 0, data: Data};
+    }
 
   render() {
     return (
@@ -13,16 +18,11 @@ class App extends Component {
               <h1 className="App-title">Fin header</h1>
           </header>
           <main>
-              <div id="nav">
-                  {/*nav bar */}
-                  <button>Press me</button>
-              </div>
               <div className="container" >
 
                   {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                     -Jonas */}
-                  <SVGImageContainer url={"/logo.svg"} />
-                  <PoemContainer url={"/poems/placeholder.json"} />
+                  <ContainerComponent data={this.state.data} />
               </div>
           </main>
           {/*<footer>

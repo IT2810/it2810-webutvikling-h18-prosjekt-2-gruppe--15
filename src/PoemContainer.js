@@ -19,7 +19,6 @@ class PoemContainer extends Component{
         this.state = {poem:{author: "None", verses: ["Poem not loaded"]}}
     }
 
-
     getPoem(relativeURL){
 
         /*Uses AJAX to get poem as a JSON. JSON object is loaded into poem in state. state-variable is only ready for one poem. */
