@@ -14,8 +14,7 @@ const navBar = props =>(
                 <ul>
                     <li><a>SEA</a></li>
                     <li><a>DESERT</a></li>
-                    <li><a>FOREST</a></li>
-                    <li><a>CITY</a></li>
+                    <li><a>RAIN</a></li>
                 </ul>
             </div>
         </nav>
