@@ -43,7 +43,7 @@ class PoemContainer extends Component{
         let verses = this.state.poem.verses;
         return (
             //TODO: Avoid null-errors if needed
-            <div>
+            <div className="poemCont">
                 {/* Traverses the list verves, wrapping every element in a <p>-tag. To use more variables like year,
                  add fields to JSON then use i.e. this.state.poem.year */}
                 <h1>{this.state.poem.title}</h1>
