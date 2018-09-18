@@ -51,7 +51,7 @@
     color: lightgray;
 }
 
-@media only screen and (max-device-width: 750px ){
+@media only screen and (max-device-width: 800px ){
     .spacer{
         flex: 0;
     }
