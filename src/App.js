@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ContainerComponent from './ContainerComponent';
 
+import SVGImageContainer from "./SVGImageContainer";
+import PoemContainer from "./PoemContainer";
 
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">
@@ -12,17 +15,18 @@ class App extends Component {
               <h1 className="App-title">Fin header</h1>
           </header>
           <main>
-              <div id="nav">
-                  {/*nav bar */}
-                  <button>Press me</button>
+              <div className="container" >
+
+                  {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
+                    -Jonas */}
+                  <SVGImageContainer url={"/logo.svg"} />
+                  <PoemContainer url={"/poems/placeholder.json"} />
               </div>
-              <ContainerComponent></ContainerComponent>
-              <ContainerComponent></ContainerComponent>
-              <ContainerComponent></ContainerComponent>
           </main>
           {/*<footer>
               <p>vakker footer</p>
           </footer>*/}
+
       </div>
     );
   }
