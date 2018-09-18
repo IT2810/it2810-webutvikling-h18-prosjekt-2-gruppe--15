@@ -1,42 +1,47 @@
 .side-bar {
     height: 100%;
-    background: white;
+    background: #6b9cea;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 30%;
     max-width: 400px;
     z-index: 200;
     display: none;
 }
+
 .open {
   display: block;
 }
+
 .side-bar ul {
     height: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: 25px;
 }
+
 .side-bar li {
     margin: 0.2em 0;
 }
 
 
 .side-bar a{
-    color: #521751;
+    color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 #back{
-    color: darkgrey;
+    color: whitesmoke;
     text-decoration-line: underline;
     font-size: 1.0rem;
+    margin-top: 15px;
 }
 .side-bar a:hover,
 .side-bar a:active{
-    color: orangered;
+    color: darkgrey;
 }
