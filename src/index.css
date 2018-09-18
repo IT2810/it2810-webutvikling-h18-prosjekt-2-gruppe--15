@@ -3,12 +3,6 @@ body {
     font-family: Verdana, sans-serif;
 }
 
-#picture{
-    border: 1px;
-    border-style: solid;
-    border-color: black;
-}
-
 #nav{
     margin-left: 5px;
 }
@@ -62,7 +56,9 @@ footer{
 @media (max-width: 800px) {
     /*tablets*/
     .container{
-        grid-auto-flow: column;
+        display: flex;
+        flex-direction: column;
+
     }
     .item{
         margin-top: 20px;

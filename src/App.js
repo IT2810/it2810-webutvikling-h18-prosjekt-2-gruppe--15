@@ -37,12 +37,9 @@ class App extends Component {
                     <NavBar drawerClickHandler={this.drawerToggleClick} />
                     <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick} />
               </div>
-              <div className="container" >
-
-                  {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
-                    -Jonas */}
-                  <ContainerComponent data={this.state.data} />
-              </div>
+              {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
+                -Jonas */}
+              <ContainerComponent data={this.state.data} />
           </main>
           {/*<footer>
               <p>vakker footer</p>
