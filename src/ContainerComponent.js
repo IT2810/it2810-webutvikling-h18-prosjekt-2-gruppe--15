@@ -1,18 +1,26 @@
-import React from "react";
+import React, {Component} from "react";
+import SVGImageContainer from "./SVGImageContainer";
+import PoemContainer from "./PoemContainer";
 
-class ContainerComponent extends React.Component{
+class ContainerComponent extends Component{
+
+    /*constructor med både poem og svg? hva med lyd??*/
+    constructor(props){
+        super(props);
+        this.state = {poemcont:{}, svgcont:{}}
+    }
+
+    /*funksjon for å hente poem og hente svg finnes, men hva med hele containern?*/
+    /*ha denne containern med containere i ? hvordan funker dette ift render?*/
+
     render() {
         return <div className="container">
-            <div className="item" id="picture">
-                <p>Bilde</p>
-                {/*<img src={navn på bildet} className="bilde" alt="Bilde" />*/}
-            </div>
-            <div className="item" id="text">
-                {/*Her må vi hente ut json objekt med AJAX*/}
-                <p> Dette er bare noe vakker placeholde tekst.</p>
-            </div>
+            <SVGImageContainer/>
+            <PoemContainer/>
         </div>
     }
+
+
 }
 
 export default ContainerComponent;
