@@ -1,0 +1,16 @@
+{"rain":{
+  "svgUrl":["/logo.svg"],
+  "mp3":[],
+  "poem":["/poems/placeholder.json"]
+},
+  "hav":{
+    "svg":[],
+    "mp3":[],
+    "poem":[]
+  },
+  "desert":{
+    "svg":[],
+    "mp3":[],
+    "poem":[]
+  }
+}
