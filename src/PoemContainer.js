@@ -16,7 +16,7 @@ import React, {Component} from "react";
 class PoemContainer extends Component{
     constructor(props){
         super(props);
-        this.state = {poem:{author: "None", title: "None", verses: ["Poem not loaded"], date: "None"}}
+        this.state = {poemUrl:{author: "None", title: "None", verses: ["Poem not loaded"], date: "None"}}
     }
 
     getPoem(relativeURL){
@@ -40,16 +40,17 @@ class PoemContainer extends Component{
     }
 
     render() {
-        let verses = this.state.poem.verses;
+        let verses = this.state.poemUrl.verses; //[this.state.key];
+        //let versess = this.state.poem.verses;
         return (
             //TODO: Avoid null-errors if needed
             <div className="poemCont">
                 {/* Traverses the list verves, wrapping every element in a <p>-tag. To use more variables like year,
                  add fields to JSON then use i.e. this.state.poem.year */}
-                <h1>{this.state.poem.title}</h1>
-                <p><i>By {this.state.poem.author}</i></p>
+                <h1>{this.state.poemUrl.title}</h1>
+                <p><i>By {this.state.poemUrl.author}</i></p>
                 {verses.map((verse, key) => <p key={key}>{verse}</p>)}
-                <p>Skrevet: {this.state.poem.date}</p>
+                <p>Skrevet: {this.state.poemUrl.date}</p>
             </div>
         );
     }
