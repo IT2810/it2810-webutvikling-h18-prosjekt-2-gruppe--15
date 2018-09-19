@@ -16,7 +16,7 @@ import React, {Component} from "react";
 class PoemContainer extends Component{
     constructor(props){
         super(props);
-        this.state = {poem:{author: "None", verses: ["Poem not loaded"]}}
+        this.state = {poem:{author: "None", title: "None", verses: ["Poem not loaded"], date: "None"}}
     }
 
     getPoem(relativeURL){
@@ -30,13 +30,13 @@ class PoemContainer extends Component{
             })
             .catch(() => {
                 console.log("PoemContainer: AJAX Failed");
-                this.setState({poem: {author: "None", verses: ["Poem-loading failed"]}});
+                this.setState({poem: {author: "None", title: "None", verses: ["Poem-loading failed"], date:"None"}});
             });
     }
 
     //TODO: Change trigger-event for this.getPoem
     componentDidMount(){
-        this.getPoem("/poems/placeholder.json");
+        this.getPoem("/poems/Rain/AprilRainSong.json");
     }
 
     render() {
@@ -46,8 +46,10 @@ class PoemContainer extends Component{
             <div className="poemCont">
                 {/* Traverses the list verves, wrapping every element in a <p>-tag. To use more variables like year,
                  add fields to JSON then use i.e. this.state.poem.year */}
-                <p>{this.state.poem.author}</p>
+                <h1>{this.state.poem.title}</h1>
+                <p><i>By {this.state.poem.author}</i></p>
                 {verses.map((verse, key) => <p key={key}>{verse}</p>)}
+                <p>Skrevet: {this.state.poem.date}</p>
             </div>
         );
     }
