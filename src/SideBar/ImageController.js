@@ -15,7 +15,7 @@ class ImageController extends Component{
                 <p><strong>Images</strong></p>
                 <ul>
                     {Object.keys(this.props.SvgKeys).map(title =>
-                        <li key={title} onClick={(e) => this.useCallback({title})}>{title}</li>)}
+                        <li key={title} onClick={(e) => this.useCallback({title})}><a>{title}</a></li>)}
                 </ul>
             </div>
         );

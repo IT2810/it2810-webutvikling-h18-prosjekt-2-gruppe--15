@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import SVGImageContainer from "./SVGImageContainer";
 import PoemContainer from "./PoemContainer";
+import Mediaplayer from "../media/Mediaplayer";
 
 
 class ContainerComponent extends Component{
@@ -18,11 +19,14 @@ class ContainerComponent extends Component{
     render() {
         let svgUrl = this.props.data[this.state.key].svgUrl[this.props.svgKey];
         let poemUrl = this.props.data[this.state.key].poem[0];
+        let mp3Url = this.props.data[this.state.key].mp3Url[0];
         console.log(this.props.svgKey);
+        console.log(mp3Url);
         console.log(svgUrl);
         return <div className="container">
             <SVGImageContainer url={svgUrl}/>
             <PoemContainer url={poemUrl}/>
+            <Mediaplayer url={mp3Url} />
         </div>
     }
 
