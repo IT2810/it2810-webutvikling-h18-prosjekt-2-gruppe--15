@@ -5,7 +5,7 @@
     "Wash": "/SVGfiles/Regn/Regnskyll.svg",
     "Summer rain": "/SVGfiles/Regn/SommerRegn.svg"
   },
-  "mp3":{
+  "mp3Url":{
     "Pouring rain": "/music/Rain/1-minute-pouring-rain-sound-effect-mp3",
     "Thundering rain": "/music/Rain/2-minutes-of-rain-and-thunder-sounds.mp3",
     "Light rain": "/music/Rain/Light-rain-and-thunder-sounds.mp3",
@@ -25,7 +25,7 @@
       "Ocean Dolphin": "/SVGfiles/Regn/OceanDolphin.svg",
       "Ocean Sunset": "/SVGfiles/Regn/OceanSunset.svg"
     },
-    "mp3":{
+    "mp3Url":{
       "Big Waves": "/music/Sea/Big-waves-crashing-stormy-sea.mp3",
       "Smooth waves": "/music/Sea/Calm-ocean-sounds-calming-seas.mp3",
       "Noisy Sea": "/music/Sea/Sea-noises.mp3",
@@ -45,7 +45,7 @@
       "Rock Desert": "/SVGFiles/Desert/RockDesert.svg",
       "Sun in the Desert": "/SVGFiles/Desert/Sun in the desert.svg"
     },
-    "mp3":{
+    "mp3Url":{
       "Snowsand": "/music/Desert/Arctic-wind.mp3",
       "Sandsteps": "/music/Desert/Person-walking-on-the-beach.mp3",
       "plingThunder": "/music/Desert/Thunderstorm-and-wind-chimes.mp3",
