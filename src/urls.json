@@ -1,18 +1,30 @@
 {"rain":{
   "svgUrl":{
-    "Placeholder": "/logo.svg",
-    "Landskap": "/logo.svg"
+    "Happy Rain": "/SVGfiles/Regn/HappyRain.svg",
+    "Night Rain": "/SVGfiles/Regn/Nattregn.svg",
+    "Wash": "/SVGfiles/Regn/Regnskyll.svg",
+    "Summer rain": "/SVGfiles/Regn/SommerRegn.svg"
   },
   "mp3":[],
   "poem":["/poems/placeholder.json"]
 },
-  "hav":{
-    "svg":[],
+  "ocean":{
+    "svgUrl":{
+      "Birds in the Ocean": "/SVGfiles/Ocean/BirdsOcean.svg",
+      "Ocean Cliffs": "/SVGfiles/Regn/OceanCliffs.svg",
+      "Ocean Dolphin": "/SVGfiles/Regn/OceanDolphin.svg",
+      "Ocean Sunset": "/SVGfiles/Regn/OceanSunset.svg"
+    },
     "mp3":[],
     "poem":[]
   },
   "desert":{
-    "svg":[],
+    "svgUrl":{
+      "Cactus in the Desert": "/SVGFiles/Desert/Cactus_in_the_Desert.svg",
+      "Pyramids":"/SVGFiles/Desert/pyramids.svg",
+      "Rock Desert": "/SVGFiles/Desert/RockDesert.svg",
+      "Sun in the Desert": "/SVGFiles/Desert/Sun in the desert.svg"
+    },
     "mp3":[],
     "poem":[]
   }

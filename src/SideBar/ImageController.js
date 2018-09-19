@@ -4,7 +4,7 @@ class ImageController extends Component{
     constructor(props){
         super(props);
         console.log(Object.keys(this.props.SvgKeys)[0]);
-        this.state={};
+        this.state={callback: ((e) => this.props.callback(e))};
     }
 
 
@@ -15,7 +15,7 @@ class ImageController extends Component{
                 <p><strong>Images</strong></p>
                 <ul>
                     {Object.keys(this.props.SvgKeys).map(title =>
-                        <li key={title} onClick={this.useCallback()}>{title}</li>)}
+                        <li key={title} onClick={(e) => this.useCallback({title})}>{title}</li>)}
                 </ul>
             </div>
         );
