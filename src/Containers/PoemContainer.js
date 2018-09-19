@@ -26,7 +26,6 @@ class PoemContainer extends Component{
             .then(responce => responce.json())
             .then(responseJson => {
                 this.setState({poem: responseJson.poem});
-                console.log(this.state.data);
             })
             .catch(() => {
                 console.log("PoemContainer: AJAX Failed");

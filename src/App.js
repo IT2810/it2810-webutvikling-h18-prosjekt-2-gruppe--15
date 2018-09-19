@@ -19,39 +19,50 @@ class App extends Component {
         this.changeAudiokey = this.changeAudiokey.bind(this);
         this.drawerToggleClick = this.drawerToggleClick.bind(this);
         this.changePoemKey = this.changePoemKey.bind(this);
+        this.changeCategoryKey = this.changeCategoryKey.bind(this);
     }
-    render(){
-        return (
-            <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Prosjekt 2</h1>
-                    <h3 className="App-undertitle">IT2810</h3>
-                </header>
-                <main>
-                    <div id="nav">
-                        {/*nav bar */}
-                        <NavBar drawerClickHandler={this.drawerToggleClick}/>
-                        <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
-                            <ImageController callback={(e) => this.changeSvgKey(e)}
-                                             SvgKeys={Data[this.state.key].svgUrl}/>
-                            <PoemController callback={(e) => this.changePoemKey(e)}
-                                            PoemKeys={Data[this.state.key].poemUrl}/>
-                            <Mp3Controller callback={(e) => this.changeAudiokey(e)}
-                                           audiokeys={Data[this.state.key].mp3Url}/>
-                        </SideBar>
 
-                    </div>
-                    {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
-            -Jonas */}
-                    <ContainerComponent data={this.state.data} svgKey={this.state.svgKey}
-                                        audioKey={this.state.audioKey}/>
-                </main>
-                {/*<footer>
-          <p>vakker footer</p>
-      </footer>*/}
+  render() {
+    return (
+      <div className="App">
+          <header className="App-header">
+              <h1 className="App-title">Prosjekt 2</h1>
+              <h3 className="App-undertitle">IT2810</h3>
+          </header>
+          <main>
+              <div id="nav">
+                  {/*nav bar */}
+                    <NavBar drawerClickHandler={this.drawerToggleClick} callback={(e) => this.changeCategoryKey(e)}
+                            keys={Object.keys(this.state.data)}/>
+                    <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
+                        <ImageController callback={(e) => this.changeSvgKey(e)}
+                            SvgKeys={Data[this.state.key].svgUrl}/>
+                        <PoemController callback={(e) => this.changePoemKey(e)}
+                            PoemKeys={Data[this.state.key].poemUrl}/>
+                    <Mp3Controller callback={(e) => this.changeAudiokey(e)}
+                            audiokeys={Data[this.state.key].mp3Url}/>
 
-            </div>
-        );
+                    </SideBar>
+              </div>
+              {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
+                -Jonas */}
+              <ContainerComponent data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
+          </main>
+          {/*<footer>
+              <p>vakker footer</p>
+          </footer>*/}
+
+      </div>
+    );
+  }
+
+  changePoemKey(e){
+    try{
+        let newPoemKey = e["title"];
+        this.setState({
+            ...this.state,
+            poemKey: newPoemKey
+        });
     }
     changeSvgKey(e) {
         try {
@@ -65,13 +76,20 @@ class App extends Component {
             console.log(e);
         }
     }
-    changePoemKey(e){
+  }
+
+  changeCategoryKey(e){
         try{
-            let newPoemKey = e["title"];
+            let newKey = e["catKey"];
+            let data = this.state.data[newKey];
+            let newSvgKey = Object.keys(data["svgUrl"])[0];
             this.setState({
                 ...this.state,
-                poemKey: newPoemKey
+                key: newKey,
+                svgKey: newSvgKey
             });
+            console.log(this.state);
+
         }
         catch (e) {
             console.log(e);

@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 class ImageController extends Component{
     constructor(props){
         super(props);
-        console.log(Object.keys(this.props.SvgKeys)[0]);
         this.state={callback: ((e) => this.props.callback(e))};
     }
 
