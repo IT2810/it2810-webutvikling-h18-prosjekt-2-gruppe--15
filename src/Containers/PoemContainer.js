@@ -3,7 +3,7 @@ import React, {Component} from "react";
 * PoemContainer:
 * @author: Jonas Giske
 *
-* Renders a poem based on JSON in property ( <PoemContainer url={"/dir/file.json" />} 
+* Renders a poem based on JSON in property ( <PoemContainer url={"/dir/file.json" />}
 * Expects JSON like:
 *  {poem:{
 *       author: "John Doe",
@@ -35,9 +35,15 @@ class PoemContainer extends Component{
 
     //TODO: Change trigger-event for this.getPoem
     componentDidMount(){
-        this.getPoem("/poems/Rain/AprilRainSong.json");
+        this.getPoem("/poems/Sea/Beach.json");
     }
-
+    getDate(){
+        if(this.state.poemUrl.date !== "None"){
+            return <p><i>{this.state.poemUrl.date}</i></p>
+        }else{
+            return null
+        }
+    }
     render() {
         let verses = this.state.poemUrl.verses; //[this.state.key];
         //let versess = this.state.poem.verses;
@@ -49,7 +55,7 @@ class PoemContainer extends Component{
                 <h1>{this.state.poemUrl.title}</h1>
                 <p><i>By {this.state.poemUrl.author}</i></p>
                 {verses.map((verse, key) => <p key={key}>{verse}</p>)}
-                <p>Skrevet: {this.state.poemUrl.date}</p>
+                {this.getDate()}
             </div>
         );
     }
