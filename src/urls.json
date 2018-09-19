@@ -1,5 +1,8 @@
 {"rain":{
-  "svgUrl":["/logo.svg"],
+  "svgUrl":{
+    "Placeholder": "/logo.svg",
+    "Landskap": "/logo.svg"
+  },
   "mp3":[],
   "poem":["/poems/placeholder.json"]
 },

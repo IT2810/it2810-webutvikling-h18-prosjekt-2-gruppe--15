@@ -5,8 +5,7 @@ import './App.css';
 
 import NavBar from "./NavBar/NavBar";
 import SideBar from "./SideBar/SideBar";
-import SVGImageContainer from "./SVGImageContainer";
-import PoemContainer from "./PoemContainer";
+import ImageController from './SideBar/ImageController';
 import ContainerComponent from './ContainerComponent';
 import Data from "./urls";
 
@@ -23,6 +22,7 @@ class App extends Component {
         super(props);
         //console.log(urlData);
         this.state = {key: "rain", svgIndex: 0, audioIndex: 0, poemIndex: 0, data: Data};
+        this.changeSvgKey = this.changeSvgKey.bind(this);
     }
 
   render() {
@@ -35,7 +35,10 @@ class App extends Component {
               <div id="nav">
                   {/*nav bar */}
                     <NavBar drawerClickHandler={this.drawerToggleClick} />
-                    <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick} />
+                    <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
+                        <ImageController callback={this.changeSvgKey.bind(this)}
+                            SvgKeys={Data[this.state.key].svgUrl}/>
+                    </SideBar>
               </div>
               <div className="container" >
 
@@ -51,6 +54,11 @@ class App extends Component {
       </div>
     );
   }
+  changeSvgKey(e){
+        console.log("Changing SVG");
+        console.log(e);
+  }
+
 }
 
 export default App;
