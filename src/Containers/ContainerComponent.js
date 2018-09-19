@@ -16,8 +16,10 @@ class ContainerComponent extends Component{
     /*ha denne containern med containere i ? hvordan funker dette ift render?*/
 
     render() {
-        let svgUrl = this.props.data[this.state.key].svgUrl[0];
+        let svgUrl = this.props.data[this.state.key].svgUrl[this.props.svgKey];
         let poemUrl = this.props.data[this.state.key].poem[0];
+        console.log(this.props.svgKey);
+        console.log(svgUrl);
         return <div className="container">
             <SVGImageContainer url={svgUrl}/>
             <PoemContainer url={poemUrl}/>
