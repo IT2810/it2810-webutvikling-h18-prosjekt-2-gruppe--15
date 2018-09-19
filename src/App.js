@@ -25,6 +25,7 @@ class App extends Component {
         this.state = {key: "rain", svgKey: "Happy Rain", audioKey: 0, poemKey: 0, data: Data};
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changePoemKey = this.changePoemKey.bind(this);
+        this.changeCategoryKey = this.changeCategoryKey.bind(this);
     }
 
   render() {
@@ -37,7 +38,8 @@ class App extends Component {
           <main>
               <div id="nav">
                   {/*nav bar */}
-                    <NavBar drawerClickHandler={this.drawerToggleClick} />
+                    <NavBar drawerClickHandler={this.drawerToggleClick} callback={(e) => this.changeCategoryKey(e)}
+                            keys={Object.keys(this.state.data)}/>
                     <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
                         <ImageController callback={(e) => this.changeSvgKey(e)}
                             SvgKeys={Data[this.state.key].svgUrl}/>
@@ -49,7 +51,7 @@ class App extends Component {
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent data={this.state.data} svgKey={this.state.svgKey} />
+              <ContainerComponent data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} />
           </main>
           {/*<footer>
               <p>vakker footer</p>
@@ -79,6 +81,26 @@ class App extends Component {
               ...this.state,
           svgKey: newSvgKey
           });
+
+          console.log(this.state);
+        }
+        catch (e) {
+            console.log(e);
+        }
+  }
+
+  changeCategoryKey(e){
+        try{
+            let newKey = e["catKey"];
+            let data = this.state.data[newKey];
+            let newSvgKey = Object.keys(data["svgUrl"])[0];
+            this.setState({
+                ...this.state,
+                key: newKey,
+                svgKey: newSvgKey
+            });
+            console.log(this.state);
+
         }
         catch (e) {
             console.log(e);
