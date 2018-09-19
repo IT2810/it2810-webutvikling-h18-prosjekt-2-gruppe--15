@@ -21,9 +21,9 @@
   "ocean":{
     "svgUrl":{
       "Birds in the Ocean": "/SVGfiles/Ocean/BirdsOcean.svg",
-      "Ocean Cliffs": "/SVGfiles/Regn/OceanCliffs.svg",
-      "Ocean Dolphin": "/SVGfiles/Regn/OceanDolphin.svg",
-      "Ocean Sunset": "/SVGfiles/Regn/OceanSunset.svg"
+      "Ocean Cliffs": "/SVGfiles/Ocean/OceanCliffs.svg",
+      "Ocean Dolphin": "/SVGfiles/Ocean/OceanDolphin.svg",
+      "Ocean Sunset": "/SVGfiles/Ocean/OceanSunset.svg"
     },
     "mp3Url":{
       "Big Waves": "/music/Sea/Big-waves-crashing-stormy-sea.mp3",
