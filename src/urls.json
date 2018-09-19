@@ -40,10 +40,10 @@
   },
   "desert":{
     "svgUrl":{
-      "Cactus in the Desert": "/SVGFiles/Desert/Cactus_in_the_Desert.svg",
-      "Pyramids":"/SVGFiles/Desert/pyramids.svg",
-      "Rock Desert": "/SVGFiles/Desert/RockDesert.svg",
-      "Sun in the Desert": "/SVGFiles/Desert/Sun in the desert.svg"
+      "Cactus in the Desert": "/SVGfiles/Desert/Cactus_in_the_Desert.svg",
+      "Pyramids":"/SVGfiles/Desert/pyramids.svg",
+      "Rock Desert": "/SVGfiles/Desert/RockDesert.svg",
+      "Sun in the Desert": "/SVGfiles/Desert/Sun in the desert.svg"
     },
     "mp3Url":{
       "Snowsand": "/music/Desert/Arctic-wind.mp3",
