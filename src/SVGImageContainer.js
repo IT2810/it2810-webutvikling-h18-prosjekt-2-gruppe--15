@@ -8,7 +8,7 @@ import React,{Component} from "react";
 class SVGImageContainer extends Component{
     constructor(props){
         super(props);
-        this.state = {svg: "<svg> <text> Placeholder SVG </text></svg>"};
+        this.state = {svgUrl: "", svg: "<svg> <text> Placeholder SVG </text></svg>"};
     }
 
     fetchImage(){
@@ -30,6 +30,9 @@ class SVGImageContainer extends Component{
     componentDidMount(){
         this.fetchImage();
     }
+
+
+
 
     render() {
         return (

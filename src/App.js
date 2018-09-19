@@ -5,8 +5,7 @@ import './App.css';
 
 import NavBar from "./NavBar/NavBar";
 import SideBar from "./SideBar/SideBar";
-import SVGImageContainer from "./SVGImageContainer";
-import PoemContainer from "./PoemContainer";
+import ImageController from './SideBar/ImageController';
 import ContainerComponent from './ContainerComponent';
 import Data from "./urls";
 
@@ -22,7 +21,8 @@ class App extends Component {
     constructor(props){
         super(props);
         //console.log(urlData);
-        this.state = {key: "rain", svgIndex: 0, audioIndex: 0, poemIndex: 0, data: Data};
+        this.state = {key: "rain", svgKey: "Happy Rain", audioKey: 0, poemKey: 0, data: Data};
+        this.changeSvgKey = this.changeSvgKey.bind(this);
     }
 
   render() {
@@ -36,11 +36,14 @@ class App extends Component {
               <div id="nav">
                   {/*nav bar */}
                     <NavBar drawerClickHandler={this.drawerToggleClick} />
-                    <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick} />
+                    <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
+                        <ImageController callback={(e) => this.changeSvgKey(e)}
+                            SvgKeys={Data[this.state.key].svgUrl}/>
+                    </SideBar>
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent data={this.state.data} />
+              <ContainerComponent data={this.state.data} svgKey={this.state.svgKey} />
           </main>
           {/*<footer>
               <p>vakker footer</p>
@@ -49,6 +52,19 @@ class App extends Component {
       </div>
     );
   }
+  changeSvgKey(e){
+      try{
+          let newSvgKey = e["title"];
+          this.setState({
+              ...this.state,
+          svgKey: newSvgKey
+          });
+        }
+        catch (e) {
+            console.log(e);
+        }
+  }
+
 }
 
 export default App;
