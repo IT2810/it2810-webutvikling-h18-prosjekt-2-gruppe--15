@@ -20,6 +20,8 @@ class ContainerComponent extends Component{
         let poemUrl = this.props.data[this.state.key].poemUrl[this.props.poemKey];
         console.log(this.props.svgKey);
         console.log(svgUrl);
+        console.log(this.props.poemKey);
+        console.log(poemUrl);
         return <div className="container">
             <SVGImageContainer url={svgUrl} />
             <PoemContainer url={poemUrl}/>

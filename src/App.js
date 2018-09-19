@@ -49,7 +49,7 @@ class App extends Component {
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent data={this.state.data} svgKey={this.state.svgKey} />
+              <ContainerComponent data={this.state.data} svgKey={this.state.svgKey} poemKey={this.state.poemKey} />
           </main>
           {/*<footer>
               <p>vakker footer</p>
