@@ -39,8 +39,8 @@ class PoemContainer extends Component{
         this.getPoem("/poems/Sea/Beach.json");
     }
     getDate(){
-        if(this.state.poem.date !== "None"){
-            return <p><i>{this.state.poem.date}</i></p>
+        if(this.state.poemUrl.date !== "None"){
+            return <p><i>{this.state.poemUrl.date}</i></p>
         }else{
             return null
         }
