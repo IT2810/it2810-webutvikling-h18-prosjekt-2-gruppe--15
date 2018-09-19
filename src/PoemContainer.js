@@ -3,7 +3,7 @@ import React, {Component} from "react";
 * PoemContainer:
 * @author: Jonas Giske
 *
-* Renders a poem based on JSON in property ( <PoemContainer url={"/dir/file.json" />} 
+* Renders a poem based on JSON in property ( <PoemContainer url={"/dir/file.json" />}
 * Expects JSON like:
 *  {poem:{
 *       author: "John Doe",
