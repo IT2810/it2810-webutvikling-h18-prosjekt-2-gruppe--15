@@ -17,7 +17,7 @@ class ContainerComponent extends Component{
 
     render() {
         let svgUrl = this.props.data[this.state.key].svgUrl[this.props.svgKey];
-        let poemUrl = this.props.data[this.state.key].poem[0];
+        let poemUrl = this.props.data[this.state.key].poemUrl[this.props.poemKey];
         console.log(this.props.svgKey);
         console.log(svgUrl);
         return <div className="container">

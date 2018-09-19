@@ -6,6 +6,7 @@ import './App.css';
 import NavBar from "./NavBar/NavBar";
 import SideBar from "./SideBar/SideBar";
 import ImageController from './SideBar/ImageController';
+import PoemController from './SideBar/PoemController';
 import ContainerComponent from './ContainerComponent';
 import Data from "./urls";
 
@@ -23,6 +24,7 @@ class App extends Component {
         //console.log(urlData);
         this.state = {key: "rain", svgKey: "Happy Rain", audioKey: 0, poemKey: 0, data: Data};
         this.changeSvgKey = this.changeSvgKey.bind(this);
+        this.changePoemKey = this.changePoemKey.bind(this);
     }
 
   render() {
@@ -39,6 +41,10 @@ class App extends Component {
                     <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
                         <ImageController callback={(e) => this.changeSvgKey(e)}
                             SvgKeys={Data[this.state.key].svgUrl}/>
+
+                        <PoemController callback={(e) => this.changePoemKey(e)}
+                                         PoemKeys={Data[this.state.key].poemUrl}/>
+
                     </SideBar>
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
@@ -52,6 +58,20 @@ class App extends Component {
       </div>
     );
   }
+
+  changePoemKey(e){
+    try{
+        let newPoemKey = e["title"];
+        this.setState({
+            ...this.state,
+            poemKey: newPoemKey
+        });
+    }
+    catch (e) {
+        console.log(e);
+    }
+  }
+
   changeSvgKey(e){
       try{
           let newSvgKey = e["title"];

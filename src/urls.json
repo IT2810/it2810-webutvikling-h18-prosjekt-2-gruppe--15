@@ -5,8 +5,10 @@
     "Wash": "/SVGfiles/Regn/Regnskyll.svg",
     "Summer rain": "/SVGfiles/Regn/SommerRegn.svg"
   },
-  "mp3":[],
-  "poem":["/poems/placeholder.json"]
+  "mp3":{},
+  "poemUrl":{
+    "noe": "/poems/placeholder.json"
+  }
 },
   "ocean":{
     "svgUrl":{
@@ -16,7 +18,9 @@
       "Ocean Sunset": "/SVGfiles/Regn/OceanSunset.svg"
     },
     "mp3":[],
-    "poem":[]
+    "poemUrl":{
+      "noe": "/poems/placeholder.json"
+    }
   },
   "desert":{
     "svgUrl":{
@@ -26,6 +30,8 @@
       "Sun in the Desert": "/SVGFiles/Desert/Sun in the desert.svg"
     },
     "mp3":[],
-    "poem":[]
+    "poemUrl":{
+      "noe": "/poems/placeholder.json"
+    }
   }
 }
