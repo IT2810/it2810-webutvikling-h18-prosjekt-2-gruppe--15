@@ -1,13 +1,12 @@
-
 import React, { Component } from 'react';
 
 import './App.css';
 
 import NavBar from "./NavBar/NavBar";
 import SideBar from "./SideBar/SideBar";
-import SVGImageContainer from "./SVGImageContainer";
-import PoemContainer from "./PoemContainer";
-import ContainerComponent from './ContainerComponent';
+import SVGImageContainer from "./Containers/SVGImageContainer";
+import PoemContainer from "./Containers/PoemContainer";
+import ContainerComponent from './Containers/ContainerComponent';
 import Data from "./urls";
 
 class App extends Component {

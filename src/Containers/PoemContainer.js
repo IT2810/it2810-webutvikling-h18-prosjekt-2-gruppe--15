@@ -36,9 +36,15 @@ class PoemContainer extends Component{
 
     //TODO: Change trigger-event for this.getPoem
     componentDidMount(){
-        this.getPoem("/poems/Rain/AprilRainSong.json");
+        this.getPoem("/poems/Sea/Beach.json");
     }
-
+    getDate(){
+        if(this.state.poem.date !== "None"){
+            return <p><i>{this.state.poem.date}</i></p>
+        }else{
+            return null
+        }
+    }
     render() {
         let verses = this.state.poem.verses;
         return (
@@ -49,7 +55,7 @@ class PoemContainer extends Component{
                 <h1>{this.state.poem.title}</h1>
                 <p><i>By {this.state.poem.author}</i></p>
                 {verses.map((verse, key) => <p key={key}>{verse}</p>)}
-                <p>Skrevet: {this.state.poem.date}</p>
+                {this.getDate()}
             </div>
         );
     }
