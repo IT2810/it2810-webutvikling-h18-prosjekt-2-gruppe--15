@@ -40,8 +40,7 @@ class PoemContainer extends Component{
     }
 
     render() {
-        let verses = this.state.poemUrl.verses; //[this.state.key];
-        //let versess = this.state.poem.verses;
+        let verses = this.state.poemUrl.verses;
         return (
             //TODO: Avoid null-errors if needed
             <div className="poemCont">
