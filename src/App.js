@@ -63,7 +63,11 @@ class App extends Component {
             ...this.state,
             poemKey: newPoemKey
         });
+    }catch (e) {
+        console.log(e);
+        }
     }
+
     changeSvgKey(e) {
         try {
             let newSvgKey = e["title"];
@@ -76,7 +80,7 @@ class App extends Component {
             console.log(e);
         }
     }
-  }
+
 
   changeCategoryKey(e){
         try{

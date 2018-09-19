@@ -40,7 +40,7 @@ class NavBar extends Component{
                         <ul>
                             {this.props.keys.map(catKey =>
                                 <li key={"li" + catKey}><a key={catKey}
-                                       onClick={(e) => this.useCallback({catKey})}> {(catKey).toUpperCase()}
+                                                           onClick={(e) => this.useCallback({catKey})}> {(catKey).toUpperCase()}
                                 </a></li>)}
                         </ul>
                     </div>
