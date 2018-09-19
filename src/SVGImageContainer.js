@@ -13,10 +13,8 @@ class SVGImageContainer extends Component{
 
     fetchImage(){
         let relativeURL = this.props.url;
-        console.log(this.state.loadedSvgs);
         if(Object.keys(this.state.loadedSvgs).indexOf(relativeURL) >= 0){
             /* SVG is found in registry of loaded SVGs */
-            console.log("Found image stored. Not doing AJAX");
             this.setState({
                 ...this.state,
                 svgUrl: relativeURL,
@@ -25,7 +23,6 @@ class SVGImageContainer extends Component{
 
         }
         else{
-            console.log("Executing AJAX");
             /*AJAX handling: relativeURL looks like '/logo.svg' og /media/images/img.svg. Fetches from public-folder in project
             The text component of the response is the HTML of the object given, ideally a pure SVG and only a SVG.
             In the catch-part, noting happens since the fallback-SVG is set in the constructor, so we're not changing any
@@ -52,7 +49,7 @@ class SVGImageContainer extends Component{
         this.fetchImage();
     }
 
-    componentWillReceiveProps(nextProps){
+    componentWillReceiveProps(){
         this.fetchImage();
     }
 
