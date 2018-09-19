@@ -1,5 +1,5 @@
 {"rain":{
-  "svgUrl":["/logo.svg"],
+  "svgUrl":["./SVGfiles/Desert/Cactus_in_the_Desert.svg"],
   "mp3":[],
   "poem":["/poems/placeholder.json"]
 },

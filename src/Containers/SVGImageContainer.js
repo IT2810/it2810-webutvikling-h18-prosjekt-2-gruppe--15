@@ -36,7 +36,7 @@ class SVGImageContainer extends Component{
             /*BEWARE: This is, as read below, dangerous - this leaves the app highly vulnerabe to cross-site scripting.
             * This is only okay because a) we're only using our own content from our own server, and b) we're not allowed
             * any puriifying libraries. */
-            <div dangerouslySetInnerHTML={{__html: this.state.svg}}>
+            <div dangerouslySetInnerHTML={{__html: this.state.svg} }>
             </div>
         );
     }
