@@ -6,6 +6,7 @@ import NavBar from "./NavBar/NavBar";
 import SideBar from "./SideBar/SideBar";
 import ContainerComponent from './Containers/ContainerComponent';
 import ImageController from './SideBar/ImageController';
+import PoemController from './SideBar/PoemController';
 import Data from "./urls";
 import Mp3Controller from "./media/Mp3Controller";
 
@@ -17,6 +18,7 @@ class App extends Component {
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changeAudiokey = this.changeAudiokey.bind(this);
         this.drawerToggleClick = this.drawerToggleClick.bind(this);
+        this.changePoemKey = this.changePoemKey.bind(this);
     }
     render(){
         return (
@@ -32,6 +34,8 @@ class App extends Component {
                         <SideBar show={this.state.sideDrawerOpen} click={this.drawerToggleClick}>
                             <ImageController callback={(e) => this.changeSvgKey(e)}
                                              SvgKeys={Data[this.state.key].svgUrl}/>
+                            <PoemController callback={(e) => this.changePoemKey(e)}
+                                            PoemKeys={Data[this.state.key].poemUrl}/>
                             <Mp3Controller callback={(e) => this.changeAudiokey(e)}
                                            audiokeys={Data[this.state.key].mp3Url}/>
                         </SideBar>
@@ -49,32 +53,44 @@ class App extends Component {
             </div>
         );
     }
-        changeSvgKey(e)
-        {
-            try {
-                let newSvgKey = e["title"];
-                this.setState({
-                    ...this.state,
-                    svgKey: newSvgKey
-                });
-            }
-            catch (e) {
-                console.log(e);
-            }
+    changeSvgKey(e) {
+        try {
+            let newSvgKey = e["title"];
+            this.setState({
+                ...this.state,
+                svgKey: newSvgKey
+            });
         }
-        changeAudiokey(e)
-        {
-            try {
-                let newAudiokey = e["title"];
-                this.setState({
-                    ...this.state,
-                    audioKey: newAudiokey
-                });
-            } catch (e) {
-                console.log(e);
-            }
+        catch (e) {
+            console.log(e);
         }
-        drawerToggleClick() {
+    }
+    changePoemKey(e){
+        try{
+            let newPoemKey = e["title"];
+            this.setState({
+                ...this.state,
+                poemKey: newPoemKey
+            });
+        }
+        catch (e) {
+            console.log(e);
+        }
+    }
+
+    changeAudiokey(e)
+    {
+        try {
+            let newAudiokey = e["title"];
+            this.setState({
+                ...this.state,
+                audioKey: newAudiokey
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    drawerToggleClick(){
         try{
             let currentState = this.state.sideDrawerOpen;
             this.setState({
@@ -84,6 +100,7 @@ class App extends Component {
         }catch (e) {
             console.log(e);
         }
-        }
+    }
 }
+
 export default App;

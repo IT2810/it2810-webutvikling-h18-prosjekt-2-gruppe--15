@@ -8,21 +8,42 @@ import React,{Component} from "react";
 class SVGImageContainer extends Component{
     constructor(props){
         super(props);
-        this.state = {svgUrl: "", svg: "<svg> <text> Placeholder SVG </text></svg>"};
+        this.state = {svgUrl: "", svg: "<svg> <text> Placeholder SVG </text></svg>", loadedSvgs:{}};
     }
 
     fetchImage(){
         let relativeURL = this.props.url;
-        console.log(relativeURL);
+        console.log(this.state.loadedSvgs);
+        if(Object.keys(this.state.loadedSvgs).indexOf(relativeURL) >= 0){
+            /* SVG is found in registry of loaded SVGs */
+            console.log("Found image stored. Not doing AJAX");
+            this.setState({
+                ...this.state,
+                svgUrl: relativeURL,
+                svg: this.state.loadedSvgs[relativeURL]
+            });
 
-        /*AJAX handling: relativeURL looks like '/logo.svg' og /media/images/img.svg. Fetches from public-folder in project
-        The text component of the response is the HTML of the object given, ideally a pure SVG and only a SVG.
-        In the catch-part, noting happens since the fallback-SVG is set in the constructor, so we're not changing any
-        state. */
-        fetch(relativeURL)
-            .then(respone => respone.text())
-            .then(rText => this.setState({svg: rText}))
-            .catch(() => console.log("AJAX failed"));
+        }
+        else{
+            console.log("Executing AJAX");
+            /*AJAX handling: relativeURL looks like '/logo.svg' og /media/images/img.svg. Fetches from public-folder in project
+            The text component of the response is the HTML of the object given, ideally a pure SVG and only a SVG.
+            In the catch-part, noting happens since the fallback-SVG is set in the constructor, so we're not changing any
+            state. */
+            fetch(relativeURL)
+                .then(respone => respone.text())
+                .then(rText => {
+                    let updatedLoadedSvgs = this.state.loadedSvgs;
+                    updatedLoadedSvgs[relativeURL] = rText;
+                    this.setState({
+                        svgUrl: relativeURL,
+                        svg: rText,
+                        loadedSvgs: updatedLoadedSvgs
+                    });
+
+                })
+                .catch(() => console.log("AJAX failed"));
+        }
     }
 
     /*Runs immediately when component-objecet is added to DOM. Might need changing later*/
@@ -31,6 +52,9 @@ class SVGImageContainer extends Component{
         this.fetchImage();
     }
 
+    componentWillReceiveProps(nextProps){
+        this.fetchImage();
+    }
 
 
 
