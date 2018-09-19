@@ -29,7 +29,8 @@ class App extends Component {
     return (
       <div className="App">
           <header className="App-header">
-              <h1 className="App-title">Fin header</h1>
+              <h1 className="App-title">Prosjekt 2</h1>
+              <h3 className="App-undertitle">IT2810</h3>
           </header>
           <main>
               <div id="nav">
@@ -40,12 +41,9 @@ class App extends Component {
                             SvgKeys={Data[this.state.key].svgUrl}/>
                     </SideBar>
               </div>
-              <div className="container" >
-
-                  {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
-                    -Jonas */}
-                  <ContainerComponent data={this.state.data} />
-              </div>
+              {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
+                -Jonas */}
+              <ContainerComponent data={this.state.data} />
           </main>
           {/*<footer>
               <p>vakker footer</p>

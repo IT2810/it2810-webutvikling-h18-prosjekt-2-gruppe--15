@@ -1,12 +1,13 @@
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    background: rebeccapurple;
+    background: #4778c6;
     height: 44px;
 
 }
+
 .navbar-nav{
     display: flex;
     height: 100%;
@@ -17,14 +18,13 @@
 .navbar-home {
     margin-left: 1rem;
 }
+
 .navbar-home a{
     color: white;
     text-decoration: none;
     font-size: 1em;
 
 }
-
-
 
 .navbar-items ul {
     list-style: none;
@@ -36,20 +36,23 @@
 .navbar-items li {
     padding: 0 0.5em;
 }
+
 .spacer{
     flex: 1;
 }
+
 .navbar-items a {
     color: white;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .navbar-items a:hover,
 .navbar-items a:active {
-    color: orangered;
+    color: lightgray;
 }
 
-@media only screen and (max-device-width: 750px ){
+@media only screen and (max-device-width: 800px ){
     .spacer{
         flex: 0;
     }

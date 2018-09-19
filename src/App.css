@@ -15,8 +15,12 @@
 }
 
 .App-title {
-  font-size: 1.5em;
-  margin-top: 50px;
+  font-size: 2em;
+  margin-top: 40px;
+}
+
+.App-undertitle{
+  margin-top: -5px;
 }
 
 .App-intro {
