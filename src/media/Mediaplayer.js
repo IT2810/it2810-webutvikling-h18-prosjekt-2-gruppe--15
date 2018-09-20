@@ -9,7 +9,7 @@ class Mediaplayer extends React.Component {
     render() {
         return(
             <div>
-                <audio src={this.props.audioKey} controls autoPlay={true} />
+                <audio src={this.props.audioKey} autoPlay={true} />
             </div>
         )
     }
