@@ -24,40 +24,45 @@ class PoemContainer extends Component{
             loadedPoems:{}}
     }
 
-    getPoem(){
+    getPoem() {
         let relativeURL = this.props.url;
-        if(Object.keys(this.state.loadedPoems).indexOf(relativeURL) >= 0){
-            /* Poem found in registry of loadeed poems */
-            this.setState({
-                ...this.state,
-                poemUrl: relativeURL,
-                poem:this.state.loadedPoems[relativeURL]
-            });
-        }
-        else{
-            /*Uses AJAX to get poem as a JSON. JSON object is loaded into poem in state. state-variable is only ready for one poem. */
-            fetch(relativeURL)
-                .then(responce => responce.json())
-                .then(responseJson => {
-                    let updatedLoadedPoems = this.state.loadedPoems;
-                    updatedLoadedPoems[relativeURL] = responseJson;
-                    this.setState({
-                        poemUrl: relativeURL,
-                        poem: responseJson.poem,
-                        loadedPoems: updatedLoadedPoems
-                    });
-                })
-                .catch(() => {
-                    console.log("PoemContainer: AJAX Failed");
+        if (!(relativeURL.valueOf() === this.state.poemUrl.valueOf())) {
+            // "Is the url in we're requesting already in loadedPoems?"
+            if (Object.keys(this.state.loadedPoems).indexOf(relativeURL) >= 0) {
+                /* Poem is found in registry of loaded Poems */
+                this.setState({
+                    ...this.state,
+                    poemUrl: relativeURL,
+                    poem: this.state.loadedPoems[relativeURL]
                 });
-        }
+                // Url is not found - we have not loaded this SVG yet.
+            }
+            else {
+                /*Uses AJAX to get poem as a JSON. JSON object is loaded into poem in state. state-variable is only ready for one poem. */
+                fetch(relativeURL)
+                    .then(responce => responce.json())
+                    .then(responseJson => {
+                        let updatedLoadedPoems = this.state.loadedPoems;
+                        updatedLoadedPoems[relativeURL] = responseJson;
+                        this.setState({
+                            poemUrl: relativeURL,
+                            poem: responseJson.poem,
+                            loadedPoems: updatedLoadedPoems
+                        });
+                    })
+                    .catch(() => {
+                        console.log("PoemContainer: AJAX Failed");
+                    });
+            }
 
+        }
     }
 
     //TODO: Change trigger-event for this.getPoem
     componentDidMount(){
-        this.getPoem(this.props.url);
+        this.getPoem();
     }
+
     getDate(){
         if(this.state.poem.date !== "None"){
             return <p><i>{this.state.poem.date}</i></p>
@@ -65,6 +70,7 @@ class PoemContainer extends Component{
             return null
         }
     }
+
     render() {
         let verses = this.state.poem.verses;
         return (
@@ -77,6 +83,7 @@ class PoemContainer extends Component{
                 {verses.map((verse, key) => <p key={key}>{verse}</p>)}
                 {this.getDate()}
             </div>
+
         );
     }
 }
