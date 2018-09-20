@@ -13,8 +13,10 @@ import Mp3Controller from "./media/Mp3Controller";
 class App extends Component {
     constructor(props) {
         super(props);
-        //console.log(urlData);
-        this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring Rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
+        //Set default data:
+        this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
+
+        this.drawerToggleClick = this.drawerToggleClick.bind(this);
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changeAudiokey = this.changeAudiokey.bind(this);
         this.drawerToggleClick = this.drawerToggleClick.bind(this);
@@ -41,12 +43,12 @@ class App extends Component {
                             PoemKeys={Data[this.state.key].poemUrl}/>
                     <Mp3Controller callback={(e) => this.changeAudiokey(e)}
                             audiokeys={Data[this.state.key].mp3Url}/>
-
+                    <h2 onClick={() => this.drawerToggleClick()}> Hide </h2>
                     </SideBar>
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} audioKey={this.state.audioKey} poemKey={this.state.poemKey}/>
+              <ContainerComponent onClick={() => this.drawerToggleClick()} data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
           </main>
           {/*<footer>
               <p>vakker footer</p>
