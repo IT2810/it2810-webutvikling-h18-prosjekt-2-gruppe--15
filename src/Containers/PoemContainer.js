@@ -39,14 +39,12 @@ class PoemContainer extends Component{
             }
             else {
                 /*Uses AJAX to get poem as a JSON. JSON object is loaded into poem in state. state-variable is only ready for one poem. */
-                console.log(relativeURL);
 
                 fetch(relativeURL)
                     .then(responce => responce.json())
                     .then(responseJson => {
                         let updatedLoadedPoems = this.state.loadedPoems;
                         updatedLoadedPoems[relativeURL] = responseJson;
-                        console.log(responseJson.poem);
                         this.setState({
                             poemUrl: relativeURL,
                             poem: responseJson.poem,
@@ -61,7 +59,7 @@ class PoemContainer extends Component{
         }
     }
 
-    //TODO: Change trigger-event for this.getPoem
+
     componentDidMount(){
         this.getPoem();
     }
@@ -80,7 +78,6 @@ class PoemContainer extends Component{
     }
 
     render() {
-        console.log(this.state);
         let verses = this.state.poem["verses"];
         return (
             //TODO: Avoid null-errors if needed
