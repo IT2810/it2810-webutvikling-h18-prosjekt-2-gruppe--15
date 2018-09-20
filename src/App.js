@@ -13,7 +13,8 @@ import Mp3Controller from "./media/Mp3Controller";
 class App extends Component {
     constructor(props) {
         super(props);
-        //console.log(urlData);
+
+        //Set default data:
         this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changeAudiokey = this.changeAudiokey.bind(this);
@@ -41,12 +42,13 @@ class App extends Component {
                             PoemKeys={Data[this.state.key].poemUrl}/>
                     <Mp3Controller callback={(e) => this.changeAudiokey(e)}
                             audiokeys={Data[this.state.key].mp3Url}/>
-
+                    <h2 onClick={() => this.drawerToggleClick()}> Hide </h2>
                     </SideBar>
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
+              <ContainerComponent onClick={() => this.drawerToggleClick()}
+                                  data={this.state.data} categoryKey={this.state.key} poemKey={this.state.poemKey} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
           </main>
           {/*<footer>
               <p>vakker footer</p>
@@ -59,6 +61,7 @@ class App extends Component {
   changePoemKey(e){
     try{
         let newPoemKey = e["title"];
+        console.log(newPoemKey);
         this.setState({
             ...this.state,
             poemKey: newPoemKey
@@ -87,10 +90,12 @@ class App extends Component {
             let newKey = e["catKey"];
             let data = this.state.data[newKey];
             let newSvgKey = Object.keys(data["svgUrl"])[0];
+            let newPoemKey = Object.keys(data["poemUrl"])[0];
             this.setState({
                 ...this.state,
                 key: newKey,
-                svgKey: newSvgKey
+                svgKey: newSvgKey,
+                poemKey: newPoemKey
             });
             console.log(this.state);
 
