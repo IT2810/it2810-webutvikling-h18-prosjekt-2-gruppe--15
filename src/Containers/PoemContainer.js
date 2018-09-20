@@ -33,17 +33,20 @@ class PoemContainer extends Component{
                 this.setState({
                     ...this.state,
                     poemUrl: relativeURL,
-                    poem: this.state.loadedPoems[relativeURL]
+                    poem: this.state.loadedPoems[relativeURL].poem
                 });
                 // Url is not found - we have not loaded this SVG yet.
             }
             else {
                 /*Uses AJAX to get poem as a JSON. JSON object is loaded into poem in state. state-variable is only ready for one poem. */
+                console.log(relativeURL);
+
                 fetch(relativeURL)
                     .then(responce => responce.json())
                     .then(responseJson => {
                         let updatedLoadedPoems = this.state.loadedPoems;
                         updatedLoadedPoems[relativeURL] = responseJson;
+                        console.log(responseJson.poem);
                         this.setState({
                             poemUrl: relativeURL,
                             poem: responseJson.poem,
@@ -62,6 +65,11 @@ class PoemContainer extends Component{
     componentDidMount(){
         this.getPoem();
     }
+    componentDidUpdate(){
+        if (!(this.props.url.valueOf() === this.state.poemUrl.valueOf())) {
+            this.getPoem();
+        }
+    }
 
     getDate(){
         if(this.state.poem.date !== "None"){
@@ -72,7 +80,8 @@ class PoemContainer extends Component{
     }
 
     render() {
-        let verses = this.state.poem.verses;
+        console.log(this.state);
+        let verses = this.state.poem["verses"];
         return (
             //TODO: Avoid null-errors if needed
             <div className="poemCont">

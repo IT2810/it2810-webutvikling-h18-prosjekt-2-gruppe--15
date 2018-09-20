@@ -59,6 +59,7 @@ class App extends Component {
   changePoemKey(e){
     try{
         let newPoemKey = e["title"];
+        console.log(newPoemKey);
         this.setState({
             ...this.state,
             poemKey: newPoemKey
