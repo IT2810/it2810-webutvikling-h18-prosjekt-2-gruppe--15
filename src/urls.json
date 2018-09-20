@@ -21,9 +21,9 @@
   "ocean":{
     "svgUrl":{
       "Birds in the Ocean": "/SVGfiles/Ocean/BirdsOcean.svg",
-      "Ocean Cliffs": "/SVGfiles/Regn/OceanCliffs.svg",
-      "Ocean Dolphin": "/SVGfiles/Regn/OceanDolphin.svg",
-      "Ocean Sunset": "/SVGfiles/Regn/OceanSunset.svg"
+      "Ocean Cliffs": "/SVGfiles/Ocean/OceanCliffs.svg",
+      "Ocean Dolphin": "/SVGfiles/Ocean/OceanDolphin.svg",
+      "Ocean Sunset": "/SVGfiles/Ocean/OceanSunset.svg"
     },
     "mp3Url":{
       "Big Waves": "/music/Sea/Big-waves-crashing-stormy-sea.mp3",
@@ -40,10 +40,10 @@
   },
   "desert":{
     "svgUrl":{
-      "Cactus in the Desert": "/SVGFiles/Desert/Cactus_in_the_Desert.svg",
-      "Pyramids":"/SVGFiles/Desert/pyramids.svg",
-      "Rock Desert": "/SVGFiles/Desert/RockDesert.svg",
-      "Sun in the Desert": "/SVGFiles/Desert/Sun in the desert.svg"
+      "Cactus in the Desert": "/SVGfiles/Desert/Cactus_in_the_Desert.svg",
+      "Pyramids":"/SVGfiles/Desert/pyramids.svg",
+      "Rock Desert": "/SVGfiles/Desert/RockDesert.svg",
+      "Sun in the Desert": "/SVGfiles/Desert/Sun in the desert.svg"
     },
     "mp3Url":{
       "Snowsand": "/music/Desert/Arctic-wind.mp3",
