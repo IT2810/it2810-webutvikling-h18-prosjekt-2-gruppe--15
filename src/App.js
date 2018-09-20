@@ -108,12 +108,15 @@ class App extends Component {
 
     changeAudiokey(e)
     {
+        console.log(e);
+        console.log("før bytte:" + this.state.audioKey);
         try {
-            let newAudiokey = e["title"];
+            let newAudiokey = e;
             this.setState({
                 ...this.state,
                 audioKey: newAudiokey
             });
+            console.log("etter bytte:" + this.state.audioKey);
         } catch (e) {
             console.log(e);
         }

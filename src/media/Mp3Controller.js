@@ -3,8 +3,6 @@ import React from 'react';
 class Mp3Controller extends React.Component{
     constructor(props) {
         super(props);
-        console.log(props);
-        console.log(Object.keys(this.props.audiokeys)[0]);
         this.state = {callback: ((e) => this.props.callback(e))};
         }
 
