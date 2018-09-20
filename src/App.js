@@ -48,7 +48,8 @@ class App extends Component {
               </div>
               {/*Replaces the div-placeholder from earlier versions. Keep the SVGImageContainer.
                 -Jonas */}
-              <ContainerComponent onClick={() => this.drawerToggleClick()} data={this.state.data} categoryKey={this.state.key} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
+              <ContainerComponent onClick={() => this.drawerToggleClick()}
+                                  data={this.state.data} categoryKey={this.state.key} poemKey={this.state.poemKey} svgKey={this.state.svgKey} audioKey={this.state.audioKey}/>
           </main>
           {/*<footer>
               <p>vakker footer</p>
@@ -61,6 +62,7 @@ class App extends Component {
   changePoemKey(e){
     try{
         let newPoemKey = e["title"];
+        console.log(newPoemKey);
         this.setState({
             ...this.state,
             poemKey: newPoemKey
@@ -89,10 +91,12 @@ class App extends Component {
             let newKey = e["catKey"];
             let data = this.state.data[newKey];
             let newSvgKey = Object.keys(data["svgUrl"])[0];
+            let newPoemKey = Object.keys(data["poemUrl"])[0];
             this.setState({
                 ...this.state,
                 key: newKey,
-                svgKey: newSvgKey
+                svgKey: newSvgKey,
+                poemKey: newPoemKey
             });
             console.log(this.state);
 
