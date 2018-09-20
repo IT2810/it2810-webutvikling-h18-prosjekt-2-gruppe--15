@@ -15,8 +15,6 @@ class ContainerComponent extends Component{
         let svgUrl = this.props.data[this.props.categoryKey].svgUrl[this.props.svgKey];
         let poemUrl = this.props.data[this.props.categoryKey].poemUrl[this.props.poemKey];
         let mp3Url = this.props.data[this.props.categoryKey].mp3Url[this.props.audioKey];
-        console.log(this.props.svgKey);
-        console.log(mp3Url);
 
         return <div className="container">
             <SVGImageContainer url={svgUrl}/>
