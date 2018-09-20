@@ -14,7 +14,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         //console.log(urlData);
-        this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring Rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
+        this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changeAudiokey = this.changeAudiokey.bind(this);
         this.drawerToggleClick = this.drawerToggleClick.bind(this);
@@ -102,12 +102,15 @@ class App extends Component {
 
     changeAudiokey(e)
     {
+        console.log(e);
+        console.log("før bytte:" + this.state.audioKey);
         try {
-            let newAudiokey = e["title"];
+            let newAudiokey = e;
             this.setState({
                 ...this.state,
                 audioKey: newAudiokey
             });
+            console.log("etter bytte:" + this.state.audioKey);
         } catch (e) {
             console.log(e);
         }

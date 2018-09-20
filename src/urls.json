@@ -6,7 +6,7 @@
     "Summer rain": "/SVGfiles/Regn/SommerRegn.svg"
   },
   "mp3Url":{
-    "Pouring rain": "/music/Rain/1-minute-pouring-rain-sound-effect-mp3",
+    "Pouring rain": "/music/Rain/1-minute-pouring-rain-sound-effect.mp3",
     "Thundering rain": "/music/Rain/2-minutes-of-rain-and-thunder-sounds.mp3",
     "Light rain": "/music/Rain/Light-rain-and-thunder-sounds.mp3",
     "Real rain": "/music/Rain/Real-rain-sound.mp3"
@@ -48,8 +48,8 @@
     "mp3Url":{
       "Snowsand": "/music/Desert/Arctic-wind.mp3",
       "Sandsteps": "/music/Desert/Person-walking-on-the-beach.mp3",
-      "plingThunder": "/music/Desert/Thunderstorm-and-wind-chimes.mp3",
-      "howl": "/music/Desert/Wind-sound.mp3"
+      "Thunder": "/music/Desert/Thunderstorm-and-wind-chimes.mp3",
+      "Winds": "/music/Desert/Wind-sound.mp3"
     },
     "poemUrl":{
       "Sands": "/poems/Desert/Desert.json",

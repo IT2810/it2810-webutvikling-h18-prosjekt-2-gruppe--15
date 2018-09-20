@@ -6,11 +6,22 @@
     top: 0;
     left: 0;
     width: 30%;
-    max-width: 400px;
     z-index: 200;
     display: none;
 }
-
+@media only screen and (max-width: 800px) {
+    .side-bar{
+        height: 100%;
+        background: #6b9cea;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        z-index: 200;
+        display: none;
+    }
+}
 .open {
   display: block;
 }
