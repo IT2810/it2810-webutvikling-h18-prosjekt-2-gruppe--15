@@ -16,6 +16,7 @@ class App extends Component {
 
         //Set default data:
         this.state = {key: "rain", svgKey: "Happy Rain", audioKey: "Pouring rain", poemKey: "Raining", data: Data, sideDrawerOpen: false};
+        this.drawerToggleClick = this.drawerToggleClick.bind(this);
         this.changeSvgKey = this.changeSvgKey.bind(this);
         this.changeAudiokey = this.changeAudiokey.bind(this);
         this.drawerToggleClick = this.drawerToggleClick.bind(this);
