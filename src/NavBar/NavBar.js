@@ -31,11 +31,13 @@ class NavBar extends Component{
         return (
             <header className="navbar">
                 <nav className="navbar-nav">
+                    {/*Henter inn komponenten Togglebutton*/}
                     <div>
                         <ToggleButton click={this.props.drawerClickHandler}/>
                     </div>
                     <div className="navbar-home"></div>
                     <div className="spacer"></div>
+                    {/*Lister alle kategoriene fra urls.json fila, og lister de bortover.*/}
                     <div className="navbar-items">
                         <ul>
                             {this.props.keys.map(catKey =>

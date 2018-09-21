@@ -5,8 +5,7 @@ class Mp3Controller extends React.Component{
         super(props);
         this.state = {callback: ((e) => this.props.callback(e))};
         }
-
-
+    /*Lister alle lydene for den valgte titlen.*/
     render(){
         return(
             <div>

@@ -40,9 +40,9 @@
   },
   "desert":{
     "svgUrl":{
-      "Cactus in the Desert": "/SVGfiles/Desert/Cactus_in_the_Desert.svg",
+      "Cactus in the Desert": "/SVGfiles/Desert/17-cactus.svg",
       "Pyramids":"/SVGfiles/Desert/pyramids.svg",
-      "Rock Desert": "/SVGfiles/Desert/RockDesert.svg",
+      "Dunes": "/SVGfiles/Desert/7-dunes.svg",
       "Sun in the Desert": "/SVGfiles/Desert/Sun in the desert.svg"
     },
     "audioUrl":{
