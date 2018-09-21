@@ -20,42 +20,42 @@
 },
   "ocean":{
     "svgUrl":{
-      "Birds in the Ocean": "/SVGfiles/Ocean/BirdsOcean.svg",
-      "Ocean Cliffs": "/SVGfiles/Ocean/OceanCliffs.svg",
-      "Ocean Dolphin": "/SVGfiles/Ocean/OceanDolphin.svg",
-      "Ocean Sunset": "/SVGfiles/Ocean/OceanSunset.svg"
+      "Birds in the Ocean": "./SVGfiles/Ocean/BirdsOcean.svg",
+      "Ocean Cliffs": "./SVGfiles/Ocean/OceanCliffs.svg",
+      "Ocean Dolphin": "./SVGfiles/Ocean/OceanDolphin.svg",
+      "Ocean Sunset": "./SVGfiles/Ocean/OceanSunset.svg"
     },
     "audioUrl":{
-      "Big Waves": "/music/Sea/Big-waves-crashing-stormy-sea.mp3",
-      "Smooth waves": "/music/Sea/Calm-ocean-sounds-calming-seas.mp3",
-      "Noisy Sea": "/music/Sea/Sea-noises.mp3",
-      "Wavey waves": "/music/Sea/Sea-waves-sound.mp3"
+      "Big Waves": "./music/Sea/Big-waves-crashing-stormy-sea.mp3",
+      "Smooth waves": "./music/Sea/Calm-ocean-sounds-calming-seas.mp3",
+      "Noisy Sea": "./music/Sea/Sea-noises.mp3",
+      "Wavey waves": "./music/Sea/Sea-waves-sound.mp3"
     },
     "poemUrl":{
-      "William": "/poems/Sea/Beach.json",
-      "Havet": "/poems/Sea/Havet.json",
-      "GammelNorsk": "/poems/Sea/Hyss.json",
-      "Skip'o'Hoi": "/poems/Sea/Skipet.json"
+      "William": "./poems/Sea/Beach.json",
+      "Havet": "./poems/Sea/Havet.json",
+      "GammelNorsk": "./poems/Sea/Hyss.json",
+      "Skip'o'Hoi": "./poems/Sea/Skipet.json"
     }
   },
   "desert":{
     "svgUrl":{
-      "Cactus in the Desert": "/SVGfiles/Desert/17-cactus.svg",
-      "Pyramids":"/SVGfiles/Desert/pyramids.svg",
-      "Dunes": "/SVGfiles/Desert/7-dunes.svg",
-      "Sun in the Desert": "/SVGfiles/Desert/Sun in the desert.svg"
+      "Cactus in the Desert": "./SVGfiles/Desert/17-cactus.svg",
+      "Pyramids":"./SVGfiles/Desert/pyramids.svg",
+      "Dunes": "./SVGfiles/Desert/7-dunes.svg",
+      "Sun in the Desert": "./SVGfiles/Desert/Sun in the desert.svg"
     },
     "audioUrl":{
-      "Snowsand": "/music/Desert/Arctic-wind.mp3",
-      "Sandsteps": "/music/Desert/Person-walking-on-the-beach.mp3",
-      "Thunder": "/music/Desert/Thunderstorm-and-wind-chimes.mp3",
-      "Winds": "/music/Desert/Wind-sound.mp3"
+      "Snowsand": "./music/Desert/Arctic-wind.mp3",
+      "Sandsteps": "./music/Desert/Person-walking-on-the-beach.mp3",
+      "Thunder": "./music/Desert/Thunderstorm-and-wind-chimes.mp3",
+      "Winds": "./music/Desert/Wind-sound.mp3"
     },
     "poemUrl":{
-      "Sands": "/poems/Desert/Desert.json",
-      "Rocks": "/poems/Desert/Desert2.json",
-      "Shifting": "/poems/Desert/DesertComeAndGo.json",
-      "Mooon": "/poems/Desert/DesertMoon.json"
+      "Sands": "./poems/Desert/Desert.json",
+      "Rocks": "./poems/Desert/Desert2.json",
+      "Shifting": "./poems/Desert/DesertComeAndGo.json",
+      "Mooon": "./poems/Desert/DesertMoon.json"
     }
   }
 }
