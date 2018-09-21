@@ -68,7 +68,6 @@ class App extends Component {
     );
   }
 
-
     //Changes URL for category in sidedraer
     changeCategoryKey(e){
         try{
@@ -111,7 +110,6 @@ class App extends Component {
             console.log(e);
         }
     }
-
 
     //Changes URL for audio
     changeAudioUrl(e)

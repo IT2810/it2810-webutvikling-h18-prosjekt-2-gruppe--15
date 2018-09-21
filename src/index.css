@@ -1,19 +1,22 @@
+/*body styling*/
 body {
     margin: 0;
     font-family: Verdana, sans-serif;
 }
 
+/*Text styling, more readable*/
 #text{
     font-size: 14px;
     margin-left: 8%;
     margin-right: 8%;
 }
 
+/*space between nav bar and container elements*/
 #nav{
     margin-bottom: 25px;
 }
 
-/*Grid style*/
+/*Grid styling*/
 .container {
     display: grid;
     grid-auto-flow: row;
@@ -25,8 +28,8 @@ body {
     margin-left: 5%;
 }
 
+/*Media query for tablets*/
 @media (max-width: 800px) {
-    /*tablets*/
     .container{
         display: flex;
         flex-direction: column;
@@ -37,8 +40,8 @@ body {
     }
 }
 
+/*Mediaquery for mobile*/
 @media (max-width: 500px) {
-    /*mobil*/
     .container{
         grid-auto-flow: column;
     }

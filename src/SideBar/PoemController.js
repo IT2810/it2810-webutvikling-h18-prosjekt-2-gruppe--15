@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
+//simple controller for poems with callbacks
+
 class PoemController extends Component{
     constructor(props){
         super(props);
         this.state={callback: ((e) => this.props.callback(e))};
     }
-
-
 
     render() {
         return (
