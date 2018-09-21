@@ -1,5 +1,48 @@
+/*body styling*/
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    font-family: Verdana, sans-serif;
+}
+
+/*Text styling, more readable*/
+#text{
+    font-size: 14px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+/*space between nav bar and container elements*/
+#nav{
+    margin-bottom: 25px;
+}
+
+/*Grid styling*/
+.container {
+    display: grid;
+    grid-auto-flow: row;
+    margin-top: 5%;
+    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 50px 50px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/*Media query for tablets*/
+@media (max-width: 800px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .item{
+        margin-top: 20px;
+    }
+}
+
+/*Mediaquery for mobile*/
+@media (max-width: 500px) {
+    .container{
+        grid-auto-flow: column;
+    }
 }
