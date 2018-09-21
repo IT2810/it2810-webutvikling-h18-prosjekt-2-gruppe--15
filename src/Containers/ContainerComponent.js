@@ -13,10 +13,13 @@ class ContainerComponent extends Component{
 
     render() {
 
-        return <div className="container">
-            <SVGImageContainer url={this.props.svgUrl}/>
-            <PoemContainer url={this.props.poemUrl}/>
+        return <div>
             <Mediaplayer url={this.props.audioUrl} />
+            <div className="container">
+                <SVGImageContainer url={this.props.svgUrl}/>
+                <PoemContainer url={this.props.poemUrl}/>
+            </div>
+
         </div>
     }
 
