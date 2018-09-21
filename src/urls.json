@@ -1,21 +1,21 @@
 {"rain":{
   "svgUrl":{
-    "Happy Rain": "/SVGfiles/Regn/HappyRain.svg",
-    "Night Rain": "/SVGfiles/Regn/Nattregn.svg",
-    "Wash": "/SVGfiles/Regn/Regnskyll.svg",
-    "Summer rain": "/SVGfiles/Regn/SommerRegn.svg"
+    "Happy Rain": "./SVGfiles/Regn/HappyRain.svg",
+    "Night Rain": "./SVGfiles/Regn/Nattregn.svg",
+    "Wash": "./SVGfiles/Regn/Regnskyll.svg",
+    "Summer rain": "./SVGfiles/Regn/SommerRegn.svg"
   },
   "audioUrl":{
-    "Pouring rain": "/music/Rain/1-minute-pouring-rain-sound-effect.mp3",
-    "Thundering rain": "/music/Rain/2-minutes-of-rain-and-thunder-sounds.mp3",
-    "Light rain": "/music/Rain/Light-rain-and-thunder-sounds.mp3",
-    "Real rain": "/music/Rain/Real-rain-sound.mp3"
+    "Pouring rain": "./music/Rain/1-minute-pouring-rain-sound-effect.mp3",
+    "Thundering rain": "./music/Rain/2-minutes-of-rain-and-thunder-sounds.mp3",
+    "Light rain": "./music/Rain/Light-rain-and-thunder-sounds.mp3",
+    "Real rain": "./music/Rain/Real-rain-sound.mp3"
   },
   "poemUrl":{
-    "April rain": "/poems/Rain/AprilRainSong.json",
-    "Raining": "/poems/Rain/Rain.json",
-    "AfricanRains": "/poems/Rain/Rain2.json",
-    "American hurricane": "/poems/Rain/Rain3.json"
+    "April rain": "./poems/Rain/AprilRainSong.json",
+    "Raining": "./poems/Rain/Rain.json",
+    "AfricanRains": "./poems/Rain/Rain2.json",
+    "American hurricane": "./poems/Rain/Rain3.json"
   }
 },
   "ocean":{
